@@ -51,7 +51,7 @@ fold = {'xt':xtrain, 'yt':ytrain, 'xv':xtest, 'yv':ytest}
 
 # parameter
 k    = 5     # k-value in KNN
-N    = 10    # number of particles
+N    = 10    # number of salps
 T    = 100   # maximum number of iterations
 opts = {'k':k, 'fold':fold, 'N':N, 'T':T}
 
