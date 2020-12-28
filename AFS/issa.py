@@ -117,9 +117,9 @@ def jfs(xtrain, ytrain, opts):
         c1 = 2 * np.exp(-(4 * t / max_iter) ** 2)
 
         for i in range(N):
-            for d in range(dim):
-                # First leader update
-                if i == 0:   
+            # First leader update
+            if i == 0:  
+                for d in range(dim):                
                     # Coefficient c2 & c3 [0 ~ 1]
                     c2 = rand() 
                     c3 = rand()
@@ -129,13 +129,16 @@ def jfs(xtrain, ytrain, opts):
                     else:
                         X[i,d] = Xf[0,d] - c1 * ((ub[0,d] - lb[0,d]) * c2 + lb[0,d])
                     
-                # Salp update
-                elif i >= 1:
-                    # Salp update by following front salp (3)
-                    X[i,d] = (X[i,d] + X[i-1, d]) / 2
+                    # Boundary
+                    X[i,d] = boundary(X[i,d], lb[0,d], ub[0,d]) 
                 
-                # Boundary
-                X[i,d] = boundary(X[i,d], lb[0,d], ub[0,d]) 
+            # Salp update
+            elif i >= 1:
+                for d in range(dim):
+                    # Salp update by following front salp (3)
+                    X[i,d] = (X[i,d] + X[i-1, d]) / 2              
+                    # Boundary
+                    X[i,d] = boundary(X[i,d], lb[0,d], ub[0,d]) 
                 
         # Binary conversion
         Xbin = binary_conversion(X, thres, N, dim)
