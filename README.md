@@ -122,6 +122,7 @@ plt.show()
 * The extra parameters represent the parameter(s) other than population size and maximum number of iterations
 * Click on the name of method to view the extra parameter(s)
 * Use the *opts* to set the specific parameter(s)
+* If you do not set extra parameters then the algorithm will use default setting in [here](/Description.md)
 
 
 | No. | Abbreviation | Name                                                                                        | Year | Extra Parameters |
