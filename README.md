@@ -10,7 +10,7 @@
 
 ## Introduction
 
-* This toolbox offers 1 advanced wrapper feature selection method
+* This toolbox offers several advanced wrapper feature selection methods
 * Source code of these methods are written based on pseudocode & paper
 
 
