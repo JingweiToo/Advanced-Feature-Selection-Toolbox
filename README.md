@@ -14,6 +14,18 @@
 * Source code of these methods are written based on pseudocode & paper
 
 
+## Usage
+The main function *jfs* is adopted to perform feature selection. You may switch the algorithm by changing the 'issa' to [other abbreviations](/README.md#list-of-available-advanced-feature-selection-methods)
+* If you wish to use improved salp swarm algorithm ( ISSA ) then you may write
+```code
+from AFS.issa import jfs
+```
+* If you want to use time varying binary salp swarm algorithm ( TVBSSA ) then you may write
+```code
+from AFS.tvbssa import jfs
+```
+
+
 ## Input
 * *feat*   : feature vector matrix ( Instance *x* Features )
 * *label*  : label matrix ( Instance *x* 1 )
@@ -31,7 +43,7 @@
     + *c*  : convergence curve
     
     
-### Example 1 : Improved Salp Swarm Algorithm ( ISSA ) 
+### Example : Improved Salp Swarm Algorithm ( ISSA ) 
 ```code 
 import numpy as np
 import pandas as pd
@@ -105,4 +117,14 @@ plt.show()
 * Matplotlib
 
 
+## List of available advanced feature selection methods
+* The extra parameters represent the parameter(s) other than population size and maximum number of iterations
+* Click on the name of method to view the extra parameter(s)
+* Use the *opts* to set the specific parameter(s)
+
+
+| No. | Abbreviation | Name                                                                                        | Year | Extra Parameters |
+|-----|--------------|---------------------------------------------------------------------------------------------|------|------------------|
+| 02  | tvbssa       | Time Varying Binary Salp Swarm Algorithm                                                    | -    | No               |
+| 01  | issa         | [Improved Salp Swarm Algorithm](/Description.md#improved-salp-swarm-algorithm-issa)         | -    | Yes              |
 
