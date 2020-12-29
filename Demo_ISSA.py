@@ -20,7 +20,7 @@ fold = {'xt':xtrain, 'yt':ytrain, 'xv':xtest, 'yv':ytest}
 k     = 5     # k-value in KNN
 N     = 10    # number of salps
 T     = 100   # maximum number of iterations
-maxLt = 10    # maxium iteration for local search algorithm
+maxLt = 10    # maximum iteration for local search algorithm
 opts  = {'k':k, 'fold':fold, 'N':N, 'T':T, 'maxLt':maxLt}
 
 # perform feature selection
