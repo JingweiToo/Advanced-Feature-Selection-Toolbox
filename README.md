@@ -1,11 +1,11 @@
 # Jx-AFST : Advanced Feature Selection Toolbox
 
-![Wheel](https://github.com/JingweiToo/Advanced-Feature-Selection-Toolbox/blob/main/Capture.JPG)
-
 ---
 > "Toward Talent Scientist: Sharing and Learning Together"
 >  --- [Jingwei Too](https://jingweitoo.wordpress.com/)
 ---
+
+![Wheel](https://github.com/JingweiToo/Advanced-Feature-Selection-Toolbox/blob/main/Capture.JPG)
 
 
 ## Introduction
