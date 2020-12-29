@@ -35,9 +35,9 @@ def boundary(x, lb, ub):
     return x
 
 
+#--- Opposition based learning (7)
 def opposition_based_learning(X, lb, ub, thres, N, dim):
     Xo = np.zeros([N, dim], dtype='float')
-    # opposition based learning (7)
     for i in range(N):
         for d in range(dim):
             Xo[i,d] = lb[0,d] + ub[0,d] - X[i,d]
@@ -64,7 +64,7 @@ def jfs(xtrain, ytrain, opts):
         lb = lb * np.ones([1, dim], dtype='int')
         
     # Initialize position & velocity
-    X     = init_position(lb, ub, N, dim)
+    X    = init_position(lb, ub, N, dim)
     
     # Pre
     fit  = np.zeros([N, 1], dtype='float')
@@ -107,7 +107,7 @@ def jfs(xtrain, ytrain, opts):
     t     = 0
 
     # Store result
-    curve[0,t] = fitF
+    curve[0,t] = fitF.copy()
     print("Iteration:", t + 1)
     print("Best (ISSA):", curve[0,t])
     t += 1
@@ -153,33 +153,33 @@ def jfs(xtrain, ytrain, opts):
         #--- Local search algorithm
         Lt        = 0
         temp      = np.zeros([1, dim], dtype='float')
-        temp[0,:] = Xf[0,:]       
+        temp[0,:] = Xf[0,:]      
         
         while Lt < max_local_iter:
-            # Random three features
+            #--- Random three features
             RD = np.random.permutation(dim)
             for d in range(3):
                 index = RD[d]                
-                # Flip the selected three features
+                #--- Flip the selected three features
                 if temp[0,index] > thres:
                     temp[0,index] = temp[0,index] - thres
                 else:
                     temp[0,index] = temp[0,index] + thres
                            
-            # Binary conversion
+            #--- Binary conversion
             temp_bin = binary_conversion(temp, thres, 1, dim)
 
-            # Fitness
+            #--- Fitness
             Fnew = Fun(xtrain, ytrain, temp_bin[0,:], opts)
             if Fnew < fitF:
-                fitF    = Fnew 
+                fitF    = Fnew
                 Xf[0,:] = temp[0,:]
             
             Lt += 1
 
 
         # Store result
-        curve[0,t] = fitF
+        curve[0,t] = fitF.copy()
         print("Iteration:", t + 1)
         print("Best (ISSA):", curve[0,t])
         t += 1
