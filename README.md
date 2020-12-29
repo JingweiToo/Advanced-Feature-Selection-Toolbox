@@ -11,6 +11,7 @@
 ## Introduction
 
 * This toolbox offers several advanced wrapper feature selection methods
+* The < Demo_ISSA file > provides an example of how to apply ISSA on benchmark dataset
 * Source code of these methods are written based on pseudocode & paper
 
 
