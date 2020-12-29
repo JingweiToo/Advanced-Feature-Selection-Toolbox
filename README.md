@@ -125,6 +125,6 @@ plt.show()
 
 | No. | Abbreviation | Name                                                                                        | Year | Extra Parameters |
 |-----|--------------|---------------------------------------------------------------------------------------------|------|------------------|
-| 02  | tvbssa       | Time Varying Binary Salp Swarm Algorithm                                                    | -    | No               |
-| 01  | issa         | [Improved Salp Swarm Algorithm](/Description.md#improved-salp-swarm-algorithm-issa)         | -    | Yes              |
+| 02  | tvbssa       | Time Varying Binary Salp Swarm Algorithm                                                    | 2020 | No               |
+| 01  | issa         | [Improved Salp Swarm Algorithm](/Description.md#improved-salp-swarm-algorithm-issa)         | 2020 | Yes              |
 
