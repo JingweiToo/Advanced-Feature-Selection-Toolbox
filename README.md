@@ -118,6 +118,7 @@ plt.show()
 
 
 ## List of available advanced feature selection methods
+* Note that the methods are altered so that they can be used in feature selection tasks
 * The extra parameters represent the parameter(s) other than population size and maximum number of iterations
 * Click on the name of method to view the extra parameter(s)
 * Use the *opts* to set the specific parameter(s)
@@ -125,6 +126,8 @@ plt.show()
 
 | No. | Abbreviation | Name                                                                                        | Year | Extra Parameters |
 |-----|--------------|---------------------------------------------------------------------------------------------|------|------------------|
-| 02  | tvbssa       | Time Varying Binary Salp Swarm Algorithm                                                    | 2020 | No               |
-| 01  | issa         | [Improved Salp Swarm Algorithm](/Description.md#improved-salp-swarm-algorithm-issa)         | 2020 | Yes              |
+| 03  | tvbssa       | Time Varying Binary Salp Swarm Algorithm                                                    | 2020 | No               |
+| 02  | issa         | [Improved Salp Swarm Algorithm](/Description.md#improved-salp-swarm-algorithm-issa)         | 2020 | Yes              |
+| 01  | essa         | Enhanced Salp Swarm Algorithm                                                               | 2019 | No               |
+
 
