@@ -54,26 +54,27 @@ def jfs(xtrain, ytrain, opts):
     # Dimension
     dim = np.size(xtrain, 1)
     if np.size(lb) == 1:
-        ub = ub * np.ones([1, dim], dtype='int')
-        lb = lb * np.ones([1, dim], dtype='int')
+        ub = ub * np.ones([1, dim], dtype='float')
+        lb = lb * np.ones([1, dim], dtype='float')
         
     # Initialize position & velocity
     X     = init_position(lb, ub, N, dim)
     
+    #--- Binary conversion
+    X     = binary_conversion(X, thres, N, dim)    
+    
     # Pre
     fit   = np.zeros([N, 1], dtype='float')
-    Xf    = np.zeros([1, dim], dtype='float')
+    Xf    = np.zeros([1, dim], dtype='int')
     fitF  = float('inf')
     curve = np.zeros([1, max_iter], dtype='float') 
     t     = 0
 
     while t < max_iter:
-        # Binary conversion
-        Xbin = binary_conversion(X, thres, N, dim)
         
         # Fitness
         for i in range(N):
-            fit[i,0] = Fun(xtrain, ytrain, Xbin[i,:], opts)
+            fit[i,0] = Fun(xtrain, ytrain, X[i,:], opts)
             if fit[i,0] < fitF:
                 Xf[0,:] = X[i,:]
                 fitF    = fit[i,0]
@@ -115,13 +116,18 @@ def jfs(xtrain, ytrain, opts):
             else:
                 for d in range(dim):
                     # Salp update by following front salp (4)
-                    X[i,d] = (X[i,d] + X[i-1, d]) / 2
+                    Xn     = (X[i,d] + X[i-1, d]) / 2
                     # Boundary
-                    X[i,d] = boundary(X[i,d], lb[0,d], ub[0,d]) 
-        
+                    Xn     = boundary(Xn, lb[0,d], ub[0,d]) 
+                    #--- Binary conversion
+                    if Xn > thres:
+                        X[i,d] = 1
+                    else:
+                        X[i,d] = 0
+
 
     # Best feature subset
-    Gbin       = binary_conversion(Xf, thres, 1, dim) 
+    Gbin       = Xf[0,:] 
     Gbin       = Gbin.reshape(dim)
     pos        = np.asarray(range(0, dim))    
     sel_index  = pos[Gbin == 1]
@@ -130,3 +136,4 @@ def jfs(xtrain, ytrain, opts):
     tvbssa_data = {'sf': sel_index, 'c': curve, 'nf': num_feat}
     
     return tvbssa_data  
+
