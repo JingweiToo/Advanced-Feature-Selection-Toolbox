@@ -126,10 +126,11 @@ plt.show()
 * If you do not set extra parameters then the algorithm will use default setting in [here](/Description.md)
 
 
-| No. | Abbreviation | Name                                                                                        | Year | Extra Parameters |
-|-----|--------------|---------------------------------------------------------------------------------------------|------|------------------|
-| 03  | tvbssa       | Time Varying Binary Salp Swarm Algorithm                                                    | 2020 | No               |
-| 02  | issa         | [Improved Salp Swarm Algorithm](/Description.md#improved-salp-swarm-algorithm-issa)         | 2020 | Yes              |
-| 01  | essa         | Enhanced Salp Swarm Algorithm                                                               | 2019 | No               |
+| No. | Abbreviation | Name                                                                                                  | Year | Extra Parameters |
+|-----|--------------|-------------------------------------------------------------------------------------------------------|------|------------------|
+| 04  | tmgwo        | [Two-phase Mutation Grey Wolf Optimizer](Description.md#two-phase-mutation-grey-wolf-optimizer-tmgwo) | 2020 | Yes              |
+| 03  | tvbssa       | Time Varying Binary Salp Swarm Algorithm                                                              | 2020 | No               |
+| 02  | issa         | [Improved Salp Swarm Algorithm](/Description.md#improved-salp-swarm-algorithm-issa)                   | 2020 | Yes              |
+| 01  | essa         | Enhanced Salp Swarm Algorithm                                                                         | 2019 | No               |
 
 
