@@ -50,7 +50,7 @@ def jfs(xtrain, ytrain, opts):
     ub             = 1
     lb             = 0
     thres          = 0.5
-    max_local_iter = 10
+    max_local_iter = 10     # maximum iteration for local search
     
     N              = opts['N']
     max_iter       = opts['T']

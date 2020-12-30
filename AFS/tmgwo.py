@@ -47,7 +47,7 @@ def jfs(xtrain, ytrain, opts):
     ub    = 1
     lb    = 0
     thres = 0.5
-    Mp    = 0.5
+    Mp    = 0.5    # mutation probability
     
     N        = opts['N']
     max_iter = opts['T']
