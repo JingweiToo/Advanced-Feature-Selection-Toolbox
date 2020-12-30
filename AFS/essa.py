@@ -50,7 +50,7 @@ def jfs(xtrain, ytrain, opts):
         ub = ub * np.ones([1, dim], dtype='float')
         lb = lb * np.ones([1, dim], dtype='float')
         
-    # Initialize position & velocity
+    # Initialize position 
     X     = init_position(lb, ub, N, dim)
     
     # Pre
