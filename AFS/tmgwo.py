@@ -168,7 +168,7 @@ def jfs(xtrain, ytrain, opts):
         Xmut2      = np.zeros([1, dim], dtype='int')
         Xmut2[0,:] = Xalpha[0,:]    
         for d in range(len(idx0)):
-            r =rand()
+            r = rand()
             if r < Mp:
                 Xmut2[0, idx0[d]] = 1
                 Fnew2 = Fun(xtrain, ytrain, Xmut2[0,:], opts)

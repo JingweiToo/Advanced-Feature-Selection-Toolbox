@@ -116,9 +116,9 @@ def jfs(xtrain, ytrain, opts):
             else:
                 for d in range(dim):
                     # Salp update by following front salp (4)
-                    Xn     = (X[i,d] + X[i-1, d]) / 2
+                    Xn = (X[i,d] + X[i-1, d]) / 2
                     # Boundary
-                    Xn     = boundary(Xn, lb[0,d], ub[0,d]) 
+                    Xn = boundary(Xn, lb[0,d], ub[0,d]) 
                     #--- Binary conversion
                     if Xn > thres:
                         X[i,d] = 1
