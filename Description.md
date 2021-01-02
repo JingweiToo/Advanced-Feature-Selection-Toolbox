@@ -9,6 +9,20 @@ maxLt = 10     # maximum iteration for local search algorithm
 opts = {'k':k, 'fold':fold, 'N':N, 'T':T, 'maxLt':maxLt}
 ```
 
+## Modified Global Flower Pollination Algorithm (MGFPA)
+* MGFPA contains 1 extra parameter 
+```code
+P = 0.8       # switch probability
+opts = {'k':k, 'fold':fold, 'N':N, 'T':T, 'P':P}
+```
+
+## Opposition Based Whale Optimization Algorithm (OBWOA)
+* OBWOA contains 1 extra parameters
+```code
+b = 1       # constant
+opts = {'k':k, 'fold':fold, 'N':N, 'T':T, 'b':b}
+```
+
 ## Two-phase Mutation Grey Wolf Optimizer (TMGWO)
 * TMGWO contains 1 extra parameter
 ```code 
