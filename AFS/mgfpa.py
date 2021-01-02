@@ -109,6 +109,7 @@ def jfs(xtrain, ytrain, opts):
                 # Levy distribution (3)
                 L = levy_distribution(beta, dim)
                 for d in range(dim):
+                    #--- update
                     if rand() < 0.5:
                         # Global pollination (2)
                         Xnew[i,d] = X[i,d] + gamma * L[d] * (Xgb[0,d] - X[i,d]) 
@@ -119,7 +120,7 @@ def jfs(xtrain, ytrain, opts):
                         B   = R[1]
                         #--- Epsilon [0 to 1]
                         r2 = rand()
-                        #--- Local pollination (6)
+                        #--- Pollination (6)
                         Xnew[i,d] = (max(X[A,d], X[B,d]) - min(X[A,d], X[B,d])) * r2 + min(X[A,d], X[B,d])          
                     
                     # Boundary
