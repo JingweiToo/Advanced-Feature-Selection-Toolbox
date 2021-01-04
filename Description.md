@@ -2,6 +2,13 @@
 Extra parameters of listed methods other than population size / number of solutions and maximum number of iterations
 
 
+## Improved Sine Cosine Algorithm (ISCA)
+* ISCA contains 1 extra parameter
+```code 
+Ne = 10     # number of elites
+opts = {'k':k, 'fold':fold, 'N':N, 'T':T, 'Ne':Ne}
+```
+
 ## Improved Salp Swarm Algorithm (ISSA)
 * ISSA contains 1 extra parameter
 ```code 
