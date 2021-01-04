@@ -128,11 +128,13 @@ plt.show()
 
 | No. | Abbreviation | Name                                                                                                                | Year | Extra Parameters |
 |-----|--------------|---------------------------------------------------------------------------------------------------------------------|------|------------------|
-| 06  | tmgwo        | [Two-phase Mutation Grey Wolf Optimizer](Description.md#two-phase-mutation-grey-wolf-optimizer-tmgwo)               | 2020 | Yes              |
-| 05  | tvbssa       | Time Varying Binary Salp Swarm Algorithm                                                                            | 2020 | No               |
-| 04  | issa         | [Improved Salp Swarm Algorithm](/Description.md#improved-salp-swarm-algorithm-issa)                                 | 2020 | Yes              |
-| 03  | essa         | Enhanced Salp Swarm Algorithm                                                                                       | 2019 | No               |
-| 02  | mgfpa        | [Modified Global Flower Pollination Algorithm](Description.md#modified-global-flower-pollination-algorithm-mgfpa)   | 2018 | Yes              |
-| 01  | obwoa        | [Opposition Based Whale Optimization Algorithm](Description.md#opposition-based-whale-optimization-algorithm-obwoa) | 2018 | Yes              |
+| 08  | tmgwo        | [Two-phase Mutation Grey Wolf Optimizer](Description.md#two-phase-mutation-grey-wolf-optimizer-tmgwo)               | 2020 | Yes              |
+| 07  | tvbssa       | Time Varying Binary Salp Swarm Algorithm                                                                            | 2020 | No               |
+| 06  | issa         | [Improved Salp Swarm Algorithm](/Description.md#improved-salp-swarm-algorithm-issa)                                 | 2020 | Yes              |
+| 05  | essa         | Enhanced Salp Swarm Algorithm                                                                                       | 2019 | No               |
+| 04  | mgfpa        | [Modified Global Flower Pollination Algorithm](Description.md#modified-global-flower-pollination-algorithm-mgfpa)   | 2018 | Yes              |
+| 03  | obwoa        | [Opposition Based Whale Optimization Algorithm](Description.md#opposition-based-whale-optimization-algorithm-obwoa) | 2018 | Yes              |
+| 02  | isca         | [Improved Sine Cosine Algorithm](Description.md#improved-sine-cosine-algorithm-isca)                                | 2017 | Yes              |
+| 01  | bbpso        | Bare Bones Particle Swarm Optimization                                                                              | 2003 | No               |
 
 
