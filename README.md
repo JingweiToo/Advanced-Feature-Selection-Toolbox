@@ -1,5 +1,8 @@
 # Jx-AFST : Advanced Feature Selection Toolbox
 
+[![License](https://img.shields.io/badge/license-BSD_3-blue.svg)](https://github.com/JingweiToo/Advanced-Feature-Selection-Toolbox/blob/main/LICENSE)
+[![GitHub release](https://img.shields.io/badge/release-pre-yellow.svg)](https://github.com/JingweiToo/Advanced-Feature-Selection-Toolbox)
+
 ---
 > "Toward Talent Scientist: Sharing and Learning Together"
 >  --- [Jingwei Too](https://jingweitoo.wordpress.com/)
@@ -11,12 +14,12 @@
 ## Introduction
 
 * This toolbox offers several advanced wrapper feature selection methods
-* The < Demo_ISSA file > provides an example of how to apply ISSA on benchmark dataset
+* The `Demo_ISSA` file provides an example of how to apply ISSA on benchmark dataset
 * Source code of these methods are written based on pseudocode & paper
 
 
 ## Usage
-The main function *jfs* is adopted to perform feature selection. You may switch the algorithm by changing the 'issa' to [other abbreviations](/README.md#list-of-available-advanced-feature-selection-methods)
+The main function `jfs` is adopted to perform feature selection. You may switch the algorithm by changing the `issa` in `from AFS.issa import jfs` to [other abbreviations](/README.md#list-of-available-advanced-feature-selection-methods)
 * If you wish to use improved salp swarm algorithm ( ISSA ) then you may write
 ```code
 from AFS.issa import jfs
@@ -28,20 +31,20 @@ from AFS.tvbssa import jfs
 
 
 ## Input
-* *feat*   : feature vector matrix ( Instance *x* Features )
-* *label*  : label matrix ( Instance *x* 1 )
-* *opts*   : parameter settings
-    + *N* : number of solutions / population size ( *for all methods* )
-    + *T* : maximum number of iterations ( *for all methods* )
-    + *k* : *k*-value in *k*-nearest neighbor 
+* *`feat`*   : feature vector matrix ( Instance *x* Features )
+* *`label`*  : label matrix ( Instance *x* 1 )
+* *`opts`*   : parameter settings
+    + *`N`* : number of solutions / population size ( *for all methods* )
+    + *`T`* : maximum number of iterations ( *for all methods* )
+    + *`k`* : *k*-value in *k*-nearest neighbor 
 
 
 ## Output
-* *Acc*  : accuracy of validation model
-* *fmdl* : feature selection model ( It contains several results )
-    + *sf* : index of selected features
-    + *nf* : number of selected features
-    + *c*  : convergence curve
+* *`Acc`*  : accuracy of validation model
+* *`fmdl`* : feature selection model ( It contains several results )
+    + *`sf`* : index of selected features
+    + *`nf`* : number of selected features
+    + *`c`*  : convergence curve
     
     
 ### Example : Improved Salp Swarm Algorithm ( ISSA ) 
@@ -110,7 +113,6 @@ plt.show()
 
 
 ## Requirement
-
 * Python 3 
 * Numpy
 * Pandas
@@ -122,19 +124,19 @@ plt.show()
 * Note that the methods are altered so that they can be used in feature selection tasks
 * The extra parameters represent the parameter(s) other than population size and maximum number of iterations
 * Click on the name of method to view the extra parameter(s)
-* Use the *opts* to set the specific parameter(s)
+* Use the *`opts`* to set the specific parameter(s)
 * If you do not set extra parameters then the algorithm will use default setting in [here](/Description.md)
 
 
 | No. | Abbreviation | Name                                                                                                                | Year | Extra Parameters |
 |-----|--------------|---------------------------------------------------------------------------------------------------------------------|------|------------------|
-| 08  | tmgwo        | [Two-phase Mutation Grey Wolf Optimizer](Description.md#two-phase-mutation-grey-wolf-optimizer-tmgwo)               | 2020 | Yes              |
-| 07  | tvbssa       | Time Varying Binary Salp Swarm Algorithm                                                                            | 2020 | No               |
-| 06  | issa         | [Improved Salp Swarm Algorithm](/Description.md#improved-salp-swarm-algorithm-issa)                                 | 2020 | Yes              |
-| 05  | essa         | Enhanced Salp Swarm Algorithm                                                                                       | 2019 | No               |
-| 04  | mgfpa        | [Modified Global Flower Pollination Algorithm](Description.md#modified-global-flower-pollination-algorithm-mgfpa)   | 2018 | Yes              |
-| 03  | obwoa        | [Opposition Based Whale Optimization Algorithm](Description.md#opposition-based-whale-optimization-algorithm-obwoa) | 2018 | Yes              |
-| 02  | isca         | [Improved Sine Cosine Algorithm](Description.md#improved-sine-cosine-algorithm-isca)                                | 2017 | Yes              |
-| 01  | bbpso        | Bare Bones Particle Swarm Optimization                                                                              | 2003 | No               |
+| 08  | `tmgwo`      | [Two-phase Mutation Grey Wolf Optimizer](Description.md#two-phase-mutation-grey-wolf-optimizer-tmgwo)               | 2020 | Yes              |
+| 07  | `tvbssa`     | Time Varying Binary Salp Swarm Algorithm                                                                            | 2020 | No               |
+| 06  | `issa`       | [Improved Salp Swarm Algorithm](/Description.md#improved-salp-swarm-algorithm-issa)                                 | 2020 | Yes              |
+| 05  | `essa`       | Enhanced Salp Swarm Algorithm                                                                                       | 2019 | No               |
+| 04  | `mgfpa`      | [Modified Global Flower Pollination Algorithm](Description.md#modified-global-flower-pollination-algorithm-mgfpa)   | 2018 | Yes              |
+| 03  | `obwoa`      | [Opposition Based Whale Optimization Algorithm](Description.md#opposition-based-whale-optimization-algorithm-obwoa) | 2018 | Yes              |
+| 02  | `isca`       | [Improved Sine Cosine Algorithm](Description.md#improved-sine-cosine-algorithm-isca)                                | 2017 | Yes              |
+| 01  | `bbpso`      | Bare Bones Particle Swarm Optimization                                                                              | 2003 | No               |
 
 
